@@ -3,11 +3,12 @@ let elems = document.querySelectorAll('input');
 let par = document.querySelector('#par');
 
 button.addEventListener('click', function() {
-    let a = elems[0].value;
-    let b = elems[1].value;
-    let c = elems[2].value;
+    let a = +elems[0].value;
+    let b = +elems[1].value;
+    let c = +elems[2].value;
 
     let d = (b * b) - (4*a*c);
+
     if(d == 0) {
         let x = (-b)/(2*a);
         par.textContent = x;
