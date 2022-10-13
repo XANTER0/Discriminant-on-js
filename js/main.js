@@ -11,6 +11,10 @@ button.addEventListener('click', function() {
 
     if(d == 0) {
         let x = (-b)/(2*a);
+        if(isNaN(x)) {
+            par.textContent = "Не схоже на цифри";
+            return;
+        };
         par.textContent = x;
     } else if(d > 0) {
         let x1 = ((-b + Math.sqrt(d))/(2*a));
